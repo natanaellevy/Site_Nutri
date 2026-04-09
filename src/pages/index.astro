@@ -1,0 +1,245 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
+import { siteConfig } from "../config/site";
+---
+
+<BaseLayout path="/">
+  <main id="main-content">
+    <section class="hero section">
+      <div class="container hero__grid">
+        <div class="hero__content flow">
+          <span class="eyebrow">{siteConfig.heroEyebrow}</span>
+          <h1>{siteConfig.heroTitle}</h1>
+          <p class="hero__lead">{siteConfig.heroDescription}</p>
+
+          <div class="hero__actions">
+            <WhatsAppButton
+              label="Agendar minha consulta"
+              source="hero"
+              className="cta-button--primary"
+              messageTemplate="Olá! Vim pelo site e quero entender como funciona a consulta nutricional."
+            />
+            <a class="text-link" href="#como-funciona">Entender como funciona</a>
+          </div>
+
+          <ul class="chip-list" aria-label="Diferenciais do atendimento">
+            {siteConfig.heroBadges.map((badge) => (
+              <li>{badge}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero-card hero-card--main">
+            <p class="hero-card__kicker">Atendimento estratégico</p>
+            <h2>Seu plano precisa funcionar no mundo real.</h2>
+            <p>
+              O foco do acompanhamento é transformar rotina em resultado com clareza, autonomia
+              e escolhas possíveis.
+            </p>
+          </div>
+
+          <div class="hero-card hero-card--accent">
+            <span>Online + presencial</span>
+            <strong>Modelo híbrido</strong>
+          </div>
+
+          <div class="hero-card hero-card--accent hero-card--secondary">
+            <span>Conduta clínica</span>
+            <strong>Baseada em evidências</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beneficios">
+      <div class="container">
+        <SectionHeading
+          eyebrow="Benefícios para quem quer constância"
+          title="A estratégia é desenhada para reduzir atrito e aumentar adesão."
+          description="Em vez de prometer atalhos, o acompanhamento organiza uma rotina alimentar mais simples, sustentável e alinhada ao seu objetivo."
+        />
+
+        <div class="cards-grid">
+          {siteConfig.heroHighlights.map((item) => (
+            <article class="card">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="como-funciona">
+      <div class="container">
+        <SectionHeading
+          eyebrow="Como funciona"
+          title="Um processo claro para começar bem e ajustar com segurança."
+          description="Cada etapa foi pensada para transformar orientação nutricional em ação prática, sem excesso de informação nem metas irreais."
+        />
+
+        <div class="process-grid">
+          {siteConfig.process.map((step) => (
+            <article class="process-card">
+              <h3>{step.title}</h3>
+              <p>{step.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <SectionHeading
+          eyebrow="Serviços"
+          title="Atendimentos desenhados para diferentes momentos da sua rotina."
+          description="A landing centraliza a oferta principal em consulta e acompanhamento, deixando claro o que cada etapa entrega e para quem faz sentido."
+        />
+
+        <div class="service-grid">
+          {siteConfig.services.map((service) => (
+            <article class="service-card">
+              <div class="service-card__top">
+                <span class="service-card__badge">{service.format}</span>
+                <h3>{service.title}</h3>
+              </div>
+              <p>{service.description}</p>
+              <ul class="feature-list">
+                {service.highlights.map((highlight) => (
+                  <li>{highlight}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--split">
+      <div class="container split-layout">
+        <div>
+          <SectionHeading
+            eyebrow="Autoridade e confiança"
+            title="O site mostra por que essa profissional merece ser considerada."
+            description="Autoridade não depende de excesso visual. Ela aparece quando a proposta de valor, o raciocínio clínico e os sinais de credibilidade estão bem apresentados."
+          />
+        </div>
+
+        <div class="credentials-grid">
+          {siteConfig.credentials.map((credential) => (
+            <article class="credential-card">
+              <span class="credential-card__label">{credential.title}</span>
+              <h3>{credential.value}</h3>
+              <p>{credential.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted">
+      <div class="container proof-grid">
+        <div class="proof-panel">
+          <p class="proof-panel__eyebrow">Reciprocidade que ajuda a iniciar</p>
+          <h2>{siteConfig.freeResource.title}</h2>
+          <p>{siteConfig.freeResource.description}</p>
+          <WhatsAppButton
+            label={siteConfig.freeResource.buttonLabel}
+            source="mini-guia"
+            className="cta-button--secondary"
+            messageTemplate="Olá! Vim pelo site e gostaria de receber o mini guia gratuito e saber mais sobre a consulta."
+          />
+        </div>
+
+        <div class="proof-panel proof-panel--alt">
+          <p class="proof-panel__eyebrow">Prova social responsável</p>
+          <h2>Espaço pronto para depoimentos reais e autorizados.</h2>
+          <p>
+            O projeto já deixa a seção preparada para receber avaliações verdadeiras de pacientes,
+            sem recorrer a frases inventadas ou promessas exageradas.
+          </p>
+          <ul class="feature-list">
+            <li>Adicione relatos autorizados e específicos</li>
+            <li>Prefira benefícios percebidos em vez de números absolutos</li>
+            <li>Mantenha linguagem ética e alinhada ao conselho profissional</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <SectionHeading
+          eyebrow="Dúvidas frequentes"
+          title="Respostas rápidas para reduzir incerteza antes do primeiro contato."
+          description="A FAQ diminui fricção, antecipa objeções comuns e ajuda a pessoa certa a dar o próximo passo com mais segurança."
+          align="center"
+        />
+
+        <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+          {siteConfig.faqs.map((item) => (
+            <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <summary itemprop="name">{item.question}</summary>
+              <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">{item.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--final-cta">
+      <div class="container final-cta">
+        <div class="final-cta__copy">
+          <span class="eyebrow">Próximo passo</span>
+          <h2>{siteConfig.finalCta.title}</h2>
+          <p>{siteConfig.finalCta.description}</p>
+        </div>
+
+        <div class="final-cta__action">
+          <WhatsAppButton
+            label={siteConfig.finalCta.buttonLabel}
+            source="cta-final"
+            className="cta-button--primary"
+            messageTemplate="Olá! Vim pelo site e quero conversar sobre o atendimento nutricional."
+          />
+          <p class="final-cta__note">
+            Atendimento híbrido, foco em emagrecimento saudável e linguagem clara desde o
+            primeiro contato.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="visually-hidden" aria-hidden="true">
+      <div itemscope itemtype="https://schema.org/Person">
+        <meta itemprop="name" content={siteConfig.professionalName} />
+        <meta itemprop="jobTitle" content={siteConfig.role} />
+        <meta itemprop="telephone" content={siteConfig.whatsapp.display} />
+        <meta itemprop="url" content={siteConfig.seo.siteUrl} />
+        <meta itemprop="description" content={siteConfig.seo.description} />
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <meta itemprop="addressLocality" content={siteConfig.city} />
+          <meta itemprop="addressRegion" content={siteConfig.state} />
+        </div>
+      </div>
+
+      <div itemscope itemtype="https://schema.org/ProfessionalService">
+        <meta itemprop="name" content={siteConfig.brandName} />
+        <meta itemprop="description" content={siteConfig.seo.description} />
+        <meta itemprop="telephone" content={siteConfig.whatsapp.display} />
+        <meta itemprop="areaServed" content="Brasil" />
+        <meta itemprop="url" content={siteConfig.seo.siteUrl} />
+        <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <meta itemprop="addressLocality" content={siteConfig.city} />
+          <meta itemprop="addressRegion" content={siteConfig.state} />
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { siteConfig } from "../config/site";
+---
+
+<BaseLayout
+  title={`Política de privacidade | ${siteConfig.brandName}`}
+  description="Política de privacidade da landing page da nutricionista, com explicação sobre dados, contato via WhatsApp e boas práticas de LGPD."
+  path="/privacidade"
+>
+  <main id="main-content" class="section">
+    <div class="container">
+      <article class="legal-card flow">
+        <span class="eyebrow">Privacidade e transparência</span>
+        <h1>Política de privacidade</h1>
+        <p>
+          Esta página explica, de forma simples, como as informações podem ser tratadas quando
+          você navega no site e entra em contato pelo WhatsApp profissional.
+        </p>
+
+        <h2>1. Quais dados este site coleta</h2>
+        <p>
+          O site foi construído sem formulário e sem área logada. Em regra, ele não coleta dados
+          pessoais diretamente. O provedor de hospedagem pode registrar dados técnicos básicos de
+          navegação, como endereço IP, data, navegador e páginas acessadas, para fins de
+          segurança, estabilidade e prevenção de abuso.
+        </p>
+
+        <h2>2. Contato pelo WhatsApp</h2>
+        <p>
+          Ao clicar em um botão de WhatsApp, você é direcionado para a plataforma do WhatsApp
+          com uma mensagem pré-preenchida. O tratamento de dados dentro do aplicativo passa a
+          seguir também as políticas do próprio WhatsApp.
+        </p>
+
+        <h2>3. Dados sensíveis de saúde</h2>
+        <p>
+          Este site não solicita dados clínicos nem dados sensíveis diretamente. Caso você envie
+          informações de saúde durante o atendimento, o tratamento dessas informações deve seguir
+          a base legal adequada, com confidencialidade e finalidade específica.
+        </p>
+
+        <h2>4. Compartilhamento e segurança</h2>
+        <p>
+          O projeto prioriza HTTPS, headers de segurança e redução de dependências de terceiros.
+          Ainda assim, nenhuma transmissão pela internet é totalmente isenta de risco, então o
+          uso do site deve ocorrer com atenção aos seus próprios dispositivos e redes.
+        </p>
+
+        <h2>5. Direitos do titular</h2>
+        <p>
+          Caso você queira atualizar, corrigir ou esclarecer o uso de qualquer informação
+          compartilhada durante o contato profissional, utilize o WhatsApp informado no site para
+          solicitar atendimento.
+        </p>
+
+        <h2>6. Atualizações desta política</h2>
+        <p>
+          Esta política pode ser ajustada para refletir mudanças no serviço, na hospedagem ou nas
+          exigências regulatórias aplicáveis.
+        </p>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+

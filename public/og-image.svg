@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Camila Rocha Nutrição</title>
+  <desc id="desc">Imagem social da landing page com identidade visual em verde sálvia, marfim e terracota.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbf7f1" />
+      <stop offset="100%" stop-color="#e6ece1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bb6e4c" />
+      <stop offset="100%" stop-color="#965137" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1100" cy="100" r="120" fill="#f1d5c9" opacity="0.85" />
+  <circle cx="140" cy="540" r="160" fill="#d7e2d4" opacity="0.85" />
+  <rect x="90" y="90" width="1020" height="450" rx="36" fill="#fffaf3" opacity="0.94" />
+  <text x="140" y="195" fill="#2f4736" font-size="28" font-family="Arial, sans-serif" letter-spacing="6">
+    NUTRIÇÃO CLÍNICA COM FOCO EM EMAGRECIMENTO SAUDÁVEL
+  </text>
+  <text x="140" y="285" fill="#1f2d23" font-size="72" font-family="Georgia, serif" font-weight="700">
+    Camila Rocha
+  </text>
+  <text x="140" y="360" fill="#5e6a61" font-size="34" font-family="Arial, sans-serif">
+    Atendimento individual, linguagem clara e conversão direta para o WhatsApp.
+  </text>
+  <rect x="140" y="428" width="320" height="72" rx="36" fill="url(#accent)" />
+  <text x="300" y="473" fill="#fffaf6" font-size="28" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700">
+    Agende sua consulta
+  </text>
+</svg>
+

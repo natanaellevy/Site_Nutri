@@ -1,0 +1,142 @@
+---
+import "../styles/global.css";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
+import { siteConfig } from "../config/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+}
+
+const {
+  title = siteConfig.seo.title,
+  description = siteConfig.seo.description,
+  path = "/"
+} = Astro.props;
+
+const canonical = new URL(path, siteConfig.seo.siteUrl).toString();
+const ogImage = new URL(siteConfig.seo.ogImage, siteConfig.seo.siteUrl).toString();
+const isHome = path === "/";
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#f6f0e6" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={siteConfig.seo.locale} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={siteConfig.brandName} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand-mark" href="/">
+          <span class="brand-mark__seal">CR</span>
+          <span>
+            <strong>{siteConfig.brandName}</strong>
+            <small>{siteConfig.role}</small>
+          </span>
+        </a>
+
+        {isHome ? (
+          <nav class="site-nav" aria-label="Navegação principal">
+            <a href="#beneficios">Benefícios</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+        ) : (
+          <nav class="site-nav" aria-label="Navegação secundária">
+            <a href="/">Voltar para a página inicial</a>
+          </nav>
+        )}
+
+        <WhatsAppButton
+          label="Agendar conversa"
+          source={isHome ? "header" : "header-privacy"}
+          className="cta-button--compact cta-button--primary"
+        />
+      </div>
+    </header>
+
+    <slot />
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div class="site-footer__brand">
+          <p class="footer-kicker">Contato e atendimento</p>
+          <h2>{siteConfig.brandName}</h2>
+          <p>{siteConfig.businessNote}</p>
+          <p class="footer-contact">{siteConfig.whatsapp.display}</p>
+          <p>
+            {siteConfig.city}, {siteConfig.state}
+          </p>
+        </div>
+
+        <div>
+          <p class="footer-kicker">Horários</p>
+          <ul class="footer-list">
+            {siteConfig.hours.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer-kicker">Links</p>
+          <ul class="footer-list">
+            {siteConfig.socialLinks.map((link) => (
+              <li>
+                <a href={link.href} target="_blank" rel="noopener noreferrer nofollow">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a href="/privacidade">Política de privacidade</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container site-footer__legal">
+        <p>
+          Este site não substitui consulta médica. Informações clínicas, exames e condutas
+          personalizadas devem ser avaliados individualmente durante o atendimento.
+        </p>
+      </div>
+    </footer>
+
+    <WhatsAppButton
+      label="Falar no WhatsApp"
+      source="botao-flutuante"
+      className="cta-button--primary floating-whatsapp"
+    />
+  </body>
+</html>
