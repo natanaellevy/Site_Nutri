@@ -2,8 +2,8 @@ import type { SiteConfig } from "../types/site";
 
 // Substitua os campos de exemplo abaixo pelos dados reais antes de publicar.
 export const siteConfig = {
-  brandName: "Camila Rocha Nutrição",
-  professionalName: "Camila Rocha",
+  brandName: "Valdirene Monteiro Nutri",
+  professionalName: "Valdirene",
   role: "Nutricionista",
   city: "São Paulo",
   state: "SP",
@@ -143,24 +143,24 @@ export const siteConfig = {
   businessNote:
     "Este site foi estruturado para apresentar o atendimento, facilitar o primeiro contato e concentrar a conversão no WhatsApp profissional.",
   hours: [
-    "Segunda a sexta: 8h às 19h",
-    "Sábado: 8h às 12h",
+    "Segunda a sexta: 8h às 11h e de 14h às 17h",
+    "Sábado: 8h às 11h",
     "Atendimento online para todo o Brasil"
   ],
   socialLinks: [
     {
       label: "Instagram",
-      href: "https://www.instagram.com/camilarochanutri"
+      href: "https://www.instagram.com/valdirenemonteironutri"
     }
   ],
   whatsapp: {
-    number: "5511999999999",
-    display: "+55 (11) 99999-9999",
+    number: "5561986221238",
+    display: "+55 (61) 98622-1238",
     defaultMessage:
       "Olá! Vim pelo site e gostaria de saber mais sobre a consulta nutricional."
   },
   seo: {
-    title: "Nutricionista para emagrecimento saudável | Camila Rocha",
+    title: "Nutricionista para emagrecimento saudável | Valdirene Monteiro",
     description:
       "Landing page profissional para nutricionista com foco em emagrecimento saudável, atendimento híbrido e conversão direta para o WhatsApp.",
     siteUrl: "https://www.seudominio.com.br",
