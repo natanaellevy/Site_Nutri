@@ -5,8 +5,8 @@ export const siteConfig = {
   brandName: "Valdirene Monteiro Nutri",
   professionalName: "Valdirene",
   role: "Nutricionista",
-  city: "São Paulo",
-  state: "SP",
+  city: "Santa Luzia, Cidade Estrutural",
+  state: "DF",
   primaryAudience: "pessoas que buscam emagrecimento saudável com uma rotina realista",
   heroEyebrow: "Nutrição clínica com foco em emagrecimento saudável",
   heroTitle: "Emagreça com estratégia, acolhimento e um plano que cabe na sua vida.",
@@ -14,7 +14,7 @@ export const siteConfig = {
     "Atendimento nutricional individual para quem quer sair da dieta restritiva, melhorar a relação com a comida e construir resultados consistentes com leveza.",
   heroBadges: [
     "Atendimento online para todo o Brasil",
-    "Consultas presenciais em São Paulo",
+    "Consultas presenciais em Santa Luzia, Cidade Estrutural/DF",
     "Estratégia sem terrorismo alimentar"
   ],
   heroHighlights: [
@@ -162,7 +162,7 @@ export const siteConfig = {
   seo: {
     title: "Nutricionista para emagrecimento saudável | Valdirene Monteiro",
     description:
-      "Landing page profissional para nutricionista com foco em emagrecimento saudável, atendimento híbrido e conversão direta para o WhatsApp.",
+      "Landing page profissional para nutricionista com foco em emagrecimento saudável, atendimento híbrido, consultas presenciais em Santa Luzia, Cidade Estrutural/DF e conversão direta para o WhatsApp.",
     siteUrl: "https://www.seudominio.com.br",
     locale: "pt_BR",
     ogImage: "/og-image.svg"
