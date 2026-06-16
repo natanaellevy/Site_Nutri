@@ -154,8 +154,8 @@ export const siteConfig = {
     }
   ],
   whatsapp: {
-    number: "5561986221238",
-    display: "+55 (61) 98622-1238",
+    number: "5561999579345",
+    display: "+55 (61) 99957-9345",
     defaultMessage:
       "Olá! Vim pelo site e gostaria de saber mais sobre a consulta nutricional."
   },
